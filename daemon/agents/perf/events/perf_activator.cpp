@@ -140,7 +140,7 @@ namespace agents::perf {
                                          int fd)
         {
             mmap_ptr_t result {lib::mmap(nullptr, length, PROT_READ | PROT_WRITE, MAP_SHARED, fd, offset), length};
-
+            // LOG_DEBUG("[Wxl] mmap result: %p, length: %zu, offset: %zu, fd: %d", result.get(), length, offset, fd);
             if (!result) {
                 auto const mm_errno = boost::system::errc::make_error_code(boost::system::errc::errc_t(errno));
 

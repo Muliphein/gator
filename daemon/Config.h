@@ -64,12 +64,4 @@
 #endif
 #endif
 
-#ifndef CONFIG_ARMNN_AGENT
-#if defined(ANDROID) || defined(__ANDROID__)
-#define CONFIG_ARMNN_AGENT 1
-#else
-#define CONFIG_ARMNN_AGENT 0
-#endif
-#endif
-
 #endif // CONFIG_H

@@ -27,6 +27,7 @@
 /setup/*.elf
 /setup/aarch64
 /setup/armv7
+/build-arm64-21-rel
 jni
 libs
 obj

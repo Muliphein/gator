@@ -637,9 +637,9 @@ int start_capture_process(const ParserResult & result, logging::log_access_ops_t
 
         ~local_event_handler_t() override
         {
-            if (activity_manager) {
-                static_cast<void>(activity_manager->stop());
-            }
+            // if (activity_manager) {
+            //     static_cast<void>(activity_manager->stop());
+            // }
         }
 
         void process_initialised() override
@@ -665,7 +665,8 @@ int start_capture_process(const ParserResult & result, logging::log_access_ops_t
             }
 
             LOG_DEBUG("Starting the target application now...");
-            return activity_manager->start();
+            // return activity_manager->start();
+            return true;
         }
 
     private:
